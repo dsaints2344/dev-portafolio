@@ -10,8 +10,8 @@ const MainHeader: FC = () => {
           w={227}
           h={151}
           fit="contain"
-          width="75%"
-          height="50%"
+          width="65%"
+          height="20%"
           src={logo.src}
           alt="header logo"
         />
