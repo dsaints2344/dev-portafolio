@@ -1,7 +1,9 @@
+import AboutMeText from "@/components/about-me/about-me-text";
+
 export default function AboutMe() {
   return (
     <>
-      <h1>fdf</h1>
+      <AboutMeText />
     </>
   );
 }
