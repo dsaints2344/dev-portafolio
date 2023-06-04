@@ -1,16 +1,28 @@
 import { FC } from "react";
 import { Flex, Button, Grid, ActionIcon, Box } from "@mantine/core";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
+import { useRouter } from "next/router";
 
-const NavBar: FC = () => {
+const NavBar = () => {
+  const router = useRouter();
   return (
     <Flex justify="space-around">
       <Box m={5}>
         <Flex gap="lg" align="center" justify="flex-start" direction="row">
-          <Button variant="subtle" color="indigo.7" size="lg">
+          <Button
+            variant="subtle"
+            onClick={() => router.push("/")}
+            color="indigo.7"
+            size="lg"
+          >
             Home
           </Button>
-          <Button variant="subtle" color="indigo.7" size="lg">
+          <Button
+            variant="subtle"
+            onClick={() => router.push("/about-me")}
+            color="indigo.7"
+            size="lg"
+          >
             About
           </Button>
           <Button variant="subtle" color="indigo.7" size="lg">
