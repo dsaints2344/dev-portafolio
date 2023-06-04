@@ -4,7 +4,7 @@ import WelcomeText from "./welcome-text";
 import ProfilePhoto from "./profile-photo";
 const Welcome: FC = () => {
   return (
-    <Flex gap="lg" justify="space-round">
+    <Flex justify="space-around">
       <WelcomeText />
       <ProfilePhoto />
     </Flex>
