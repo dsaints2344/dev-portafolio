@@ -4,7 +4,7 @@ import Timeline from "../shared/timeline";
 const WorkExperience = () => {
   return (
     <>
-      <Box pb="1.6%">
+      <Box pb="1.6%" sx={{ justifyContent: "left" }}>
         <Title size="h1" color="indigo.7">
           Work Experience
         </Title>
