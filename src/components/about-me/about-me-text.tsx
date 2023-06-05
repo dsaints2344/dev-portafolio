@@ -8,7 +8,7 @@ const AboutMeText = () => {
           About Me
         </Title>
       </Box>
-      <Box w="70%" pt="1.6%">
+      <Box w="50%" pt="1.6%">
         <Text color="indigo.8">
           I am a curiosity, problem solving, driven software engineer, with a
           passion for understanding how things work. Which has helped through my
