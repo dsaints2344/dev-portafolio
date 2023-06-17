@@ -1,6 +1,14 @@
 import { supabaseClient } from "@/api/supabase-client";
 import { IExperience } from "../../shared/types/experience";
-import { ActionIcon, Box, Button, Flex, Title, Text } from "@mantine/core";
+import {
+  ActionIcon,
+  Box,
+  Button,
+  Flex,
+  Title,
+  Text,
+  Divider,
+} from "@mantine/core";
 import { IconBuilding, IconCalendarStats } from "@tabler/icons-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useFormatter } from "next-intl";
@@ -21,7 +29,7 @@ const Timeline = () => {
     <>
       {experience.map((value) => {
         return (
-          <Box w="50%" key={value.id}>
+          <Box w="50%" key={value.id} m="0.5%">
             <Flex justify="space-between">
               <Title color="indigo.8" size="h4" fw={400}>
                 {value.title}
@@ -60,6 +68,7 @@ const Timeline = () => {
                 </Box>
               </Flex>
             </Flex>
+            <Divider my="0.7%" />
           </Box>
         );
       })}
