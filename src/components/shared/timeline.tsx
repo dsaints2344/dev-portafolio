@@ -1,4 +1,3 @@
-import { supabaseClient } from "@/api/supabase-client";
 import { IExperience } from "../../shared/types/experience";
 import {
   ActionIcon,
@@ -10,21 +9,14 @@ import {
   Divider,
 } from "@mantine/core";
 import { IconBuilding, IconCalendarStats } from "@tabler/icons-react";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { useFormatter } from "next-intl";
 
-const Timeline = () => {
-  const [experience, setData] = useState<IExperience[]>([]);
+type Props = {
+  experience: IExperience[];
+};
+
+const Timeline = ({ experience }: Props) => {
   const dateFormat = useFormatter();
-  const loadExperience = useCallback(async () => {
-    let { data, error } = await supabaseClient.from("work_experience").select();
-    setData(data as IExperience[]);
-  }, []);
-
-  useEffect(() => {
-    loadExperience();
-  }, []);
-
   return (
     <>
       {experience.map((value) => {
