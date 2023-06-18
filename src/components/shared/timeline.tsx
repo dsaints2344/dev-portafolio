@@ -9,14 +9,12 @@ import {
   Divider,
 } from "@mantine/core";
 import { IconBuilding, IconCalendarStats } from "@tabler/icons-react";
-import { useFormatter } from "next-intl";
 
 type Props = {
   experience: IExperience[];
 };
 
 const Timeline = ({ experience }: Props) => {
-  const dateFormat = useFormatter();
   return (
     <>
       {experience.map((value) => {
@@ -45,13 +43,13 @@ const Timeline = ({ experience }: Props) => {
                 </ActionIcon>
                 <Box pt="0.5%">
                   <Text fs="xs">
-                    {dateFormat.dateTime(new Date(value.dateStart), {
+                    {new Date(value.dateStart).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "short",
                     })}{" "}
                     -{" "}
                     {value.dateEnd
-                      ? dateFormat.dateTime(new Date(value.dateEnd), {
+                      ? new Date(value.dateEnd).toLocaleDateString("en-US", {
                           year: "numeric",
                           month: "short",
                         })
