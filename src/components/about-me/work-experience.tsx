@@ -2,7 +2,6 @@ import { Box, Title } from "@mantine/core";
 import Timeline from "../shared/timeline";
 import { supabaseClient } from "@/api/supabase-client";
 import { IExperience } from "@/shared/types/experience";
-import { useFormatter } from "next-intl";
 import { useState, useCallback, useEffect } from "react";
 
 const WorkExperience = () => {
