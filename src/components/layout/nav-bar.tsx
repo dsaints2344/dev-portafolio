@@ -2,9 +2,11 @@ import { FC } from "react";
 import { Flex, Button, Grid, ActionIcon, Box } from "@mantine/core";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 import { useRouter } from "next/router";
-
+import { useTranslation } from "react-i18next";
+import "../../i18n/config";
 const NavBar = () => {
   const router = useRouter();
+  const { t } = useTranslation();
   return (
     <Flex justify="space-around">
       <Box m={5}>
@@ -15,7 +17,7 @@ const NavBar = () => {
             color="indigo.7"
             size="lg"
           >
-            Home
+            {t("common.home")}
           </Button>
           <Button
             variant="subtle"
@@ -23,7 +25,7 @@ const NavBar = () => {
             color="indigo.7"
             size="lg"
           >
-            About
+            {t("common.about")}
           </Button>
           <Button variant="subtle" color="indigo.7" size="lg">
             Tech Stack
