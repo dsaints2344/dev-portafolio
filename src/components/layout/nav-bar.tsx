@@ -1,9 +1,8 @@
-import { FC } from "react";
-import { Flex, Button, Grid, ActionIcon, Box } from "@mantine/core";
+import { Flex, Button, ActionIcon, Box } from "@mantine/core";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
-import "../../i18n/config";
+
 const NavBar = () => {
   const router = useRouter();
   const { t } = useTranslation();
