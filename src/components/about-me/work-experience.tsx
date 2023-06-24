@@ -3,10 +3,12 @@ import Timeline from "../shared/timeline";
 import { supabaseClient } from "@/api/supabase-client";
 import { IExperience } from "@/shared/types/experience";
 import { useState, useCallback, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const WorkExperience = () => {
   const [experience, setExperience] = useState<IExperience[]>([]);
   const [education, setEducation] = useState<IExperience[]>([]);
+  const { t } = useTranslation();
 
   const loadExperience = useCallback(async () => {
     let { data, error } = await supabaseClient.from("work_experience").select();
@@ -27,13 +29,13 @@ const WorkExperience = () => {
     <>
       <Box pb="1.6%" sx={{ justifyContent: "left" }}>
         <Title size="h1" color="indigo.7">
-          Work Experience
+          {t("aboutMe.workExperience")}
         </Title>
       </Box>
       <Timeline experience={experience} />
       <Box pb="1.6%" pt="1.9%" sx={{ justifyContent: "left" }}>
         <Title size="h1" color="indigo.7">
-          Education
+          {t("aboutMe.education")}
         </Title>
       </Box>
       <Timeline experience={education} />

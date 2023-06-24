@@ -1,20 +1,17 @@
 import { Box, Text, Title } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 
 const AboutMeText = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Box>
         <Title size="h1" color="indigo.7">
-          About Me
+          {t("aboutMe.header")}
         </Title>
       </Box>
       <Box w="50%" pt="1.6%">
-        <Text color="indigo.8">
-          I am a curiosity, problem solving, driven software engineer, with a
-          passion for understanding how things work. Which has helped through my
-          career, but as a kid, has left a considerable trail of destroyed toys,
-          while trying to disassemble them and put them back together.
-        </Text>
+        <Text color="indigo.8">{t("aboutMe.introduction")}</Text>
       </Box>
     </>
   );

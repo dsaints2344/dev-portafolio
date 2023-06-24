@@ -2,5 +2,16 @@
     "common": {
         "home": "Home",
         "about": "About"
+    },
+    "home": {
+        "welcomeSalute": ["Welcome,","My name is"],
+        "name": "David De Los Santos",
+        "title": "Software Engineer"
+    },
+    "aboutMe": {
+        "header": "About Me",
+        "introduction": "I am a curiosity, problem solving, driven software engineer, with a passion for understanding how things work. Which has helped through my career, but as a kid, has left a considerable trail of destroyed toys, while trying to disassemble them and put them back together.",
+        "workExperience": "Work Experience",
+        "education": "Education"
     }
 }

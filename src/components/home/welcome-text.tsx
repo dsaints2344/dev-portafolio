@@ -1,16 +1,20 @@
 import { Text } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 
 const WelcomeText = () => {
+  const { t } = useTranslation();
+  const welcomeSalute = t("home.welcomeSalute", { returnObjects: true });
   return (
     <Text fz={50} fw="bolder" color="americanBlue.7">
-      Welcome, <Text>My name is</Text>{" "}
+      {welcomeSalute[0]}
+      <Text>{welcomeSalute[1]}</Text>{" "}
       <Text
         variant="gradient"
         gradient={{ from: "americanBlue", to: "bondiBlue", deg: 20 }}
       >
-        David De Los Santos
+        {t("home.name")}
       </Text>{" "}
-      Software Engineer
+      {t("home.title")}
     </Text>
   );
 };
