@@ -26,7 +26,12 @@ const NavBar = () => {
           >
             {t("common.about")}
           </Button>
-          <Button variant="subtle" color="indigo.7" size="lg">
+          <Button
+            variant="subtle"
+            onClick={() => router.push("/tech-stack")}
+            color="indigo.7"
+            size="lg"
+          >
             Tech Stack
           </Button>
           <Button variant="subtle" color="indigo.7" size="lg">
