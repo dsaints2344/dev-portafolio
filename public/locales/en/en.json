@@ -1,7 +1,10 @@
 {
     "common": {
         "home": "Home",
-        "about": "About"
+        "about": "About",
+        "techStack": "Tech Stack",
+        "projects": "Projects",
+        "contact": "Contact"
     },
     "home": {
         "welcomeSalute": ["Welcome,","My name is"],

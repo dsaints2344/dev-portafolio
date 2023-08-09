@@ -32,24 +32,28 @@ const NavBar = () => {
             color="indigo.7"
             size="lg"
           >
-            Tech Stack
+            {t("common.techStack")}
           </Button>
           <Button variant="subtle" color="indigo.7" size="lg">
-            Projects
+            {t("common.projects")}
           </Button>
           <Button variant="subtle" color="indigo.7" size="lg">
-            Contact
+            {t("common.contact")}
           </Button>
         </Flex>
       </Box>
       <Box m={4}>
         <Flex gap="lg" justify="flex-end" direction="row">
-          <Box mt={13}>
+          <Box
+            component="a"
+            href="https://www.linkedin.com/in/david-de-los-santos-8667a9192/"
+            mt={13}
+          >
             <ActionIcon color="indigo.7" variant="filled">
               <IconBrandLinkedin />
             </ActionIcon>
           </Box>
-          <Box mt={13}>
+          <Box component="a" href="https://github.com/dsaints2344" mt={13}>
             <ActionIcon color="indigo.7" variant="filled">
               <IconBrandGithub />
             </ActionIcon>
