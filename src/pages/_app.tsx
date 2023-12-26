@@ -1,9 +1,19 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { MantineProvider } from "@mantine/core";
+import { Box, Loader, MantineProvider, Center } from "@mantine/core";
 import Layout from "@/components/layout/layout";
 import "../i18n/config";
+import { useEffect, useState } from "react";
 export default function App({ Component, pageProps }: AppProps) {
+
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000)
+  }, []);
+
   return (
     <MantineProvider
       theme={{
@@ -59,9 +69,14 @@ export default function App({ Component, pageProps }: AppProps) {
         },
       }}
     >
+      {isLoading ? 
+      <Center style={{height: "95vh"}}>
+        <Loader variant="bars" color="indigo.7" size="xl"/>
+      </Center>
+      : 
       <Layout>
         <Component {...pageProps} />
-      </Layout>
+      </Layout>}
     </MantineProvider>
   );
 }
