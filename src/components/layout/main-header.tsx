@@ -1,4 +1,4 @@
-import { Container, Grid, Image } from "@mantine/core";
+import { Box, Grid, Image } from "@mantine/core";
 import { FC } from "react";
 import logo from "../../../public/logo.svg";
 import NavBar from "./nav-bar";
@@ -6,15 +6,9 @@ const MainHeader: FC = () => {
   return (
     <Grid>
       <Grid.Col span={4}>
-        <Image
-          w={227}
-          h={151}
-          fit="contain"
-          width="65%"
-          height="20%"
-          src={logo.src}
-          alt="header logo"
-        />
+        <Box w="65%" h={151}>
+          <Image w="65%" fit="contain" src={logo.src} alt="header logo" />
+        </Box>
       </Grid.Col>
       <Grid.Col span={8}>
         <NavBar />

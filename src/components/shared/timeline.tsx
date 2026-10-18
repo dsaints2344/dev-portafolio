@@ -21,7 +21,7 @@ const Timeline = ({ experience }: Props) => {
         return (
           <Box w="50%" key={value.id} m="0.5%">
             <Flex justify="space-between">
-              <Title color="indigo.8" size="h4" fw={400}>
+              <Title c="indigo.8" size="h4" fw={400}>
                 {value.title}
               </Title>
               <Button radius="xl" variant="light" color="green.9">
@@ -30,7 +30,7 @@ const Timeline = ({ experience }: Props) => {
             </Flex>
             <Flex justify="space-between">
               <Flex>
-                <ActionIcon>
+                <ActionIcon variant="subtle" color="gray.6">
                   <IconBuilding />
                 </ActionIcon>
                 <Box pt="0.5%">
@@ -38,7 +38,7 @@ const Timeline = ({ experience }: Props) => {
                 </Box>
               </Flex>
               <Flex pt="0.5%">
-                <ActionIcon>
+                <ActionIcon variant="subtle" color="gray.6">
                   <IconCalendarStats />
                 </ActionIcon>
                 <Box pt="0.5%">

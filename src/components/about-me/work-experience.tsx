@@ -29,16 +29,16 @@ const WorkExperience = () => {
     <Flex direction="column" justify="center" align="center">
       {experience.length > 0 && education.length > 0 ? 
       <><Box pb="1.6%">
-          <Title size="h1" color="indigo.7">
+          <Title size="h1" c="indigo.7">
             {t("aboutMe.workExperience")}
           </Title>
         </Box><Timeline experience={experience} /><Box pb="1.6%" pt="1.9%">
-            <Title size="h1" color="indigo.7">
+            <Title size="h1" c="indigo.7">
               {t("aboutMe.education")}
             </Title>
           </Box><Timeline experience={education} /></> 
       : 
-      <Loader size="xl" color="indigo.7" variant="bars"/>}
+      <Loader size="xl" color="indigo.7" type="bars"/>}
     </Flex>
   );
 };

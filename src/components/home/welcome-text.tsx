@@ -5,10 +5,11 @@ const WelcomeText = () => {
   const { t } = useTranslation();
   const welcomeSalute = t("home.welcomeSalute", { returnObjects: true });
   return (
-    <Text fz={50} fw="bolder" color="americanBlue.7">
+    <Text component="div" fz={50} fw="bolder" c="americanBlue.7">
       {welcomeSalute[0]}
-      <Text>{welcomeSalute[1]}</Text>{" "}
+      <Text inherit>{welcomeSalute[1]}</Text>{" "}
       <Text
+        inherit
         variant="gradient"
         gradient={{ from: "americanBlue", to: "bondiBlue", deg: 20 }}
       >

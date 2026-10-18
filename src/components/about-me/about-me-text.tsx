@@ -6,12 +6,12 @@ const AboutMeText = () => {
   return (
     <Flex direction="column" justify="center" align="center">
       <Box>
-        <Title size="h1" color="indigo.7">
+        <Title size="h1" c="indigo.7">
           {t("aboutMe.header")}
         </Title>
       </Box>
       <Box w="53%" pt="1.6%" display="flex">
-        <Text color="indigo.8">{t("aboutMe.introduction")}</Text>
+        <Text c="indigo.8">{t("aboutMe.introduction")}</Text>
       </Box>
     </Flex>
   );
